@@ -10,7 +10,7 @@ import { presetBootstrapGrid } from 'unocss-preset-bootstrap-grid'
 
 export default defineConfig({
   presets: [
-    presetUno(), // for color theme
+    ...
     presetBootstrapGrid(),
   ],
 })
@@ -25,6 +25,7 @@ export default defineConfig({
 * .(prefix-)col-(1-12)
 * .(prefix-)col-auto
 * .(prefix-)col-offset-(1-12)
+* .(prefix-)g(x|y)-*
 
 ### Type of `BootstrapGridOptions`
 
