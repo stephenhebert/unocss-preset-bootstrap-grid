@@ -10,7 +10,7 @@ import { presetBootstrapGrid } from 'unocss-preset-bootstrap-grid'
 
 export default defineConfig({
   presets: [
-    presetUno(), // for color theme
+    ...
     presetBootstrapGrid(),
   ],
 })
