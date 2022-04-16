@@ -79,7 +79,7 @@ export function presetBootstrapGrid(options: BootstrapGridOptions = {}): Preset 
         'flex': '0 0 auto',
         'width': 'auto',
       }],
-      [new RegExp(`^${prefix}col-offset-(\\d+)$`),
+      [new RegExp(`^${prefix}offset-(\\d+)$`),
         ([, size]) => {
           return {
             'margin-left': size === '0' ? 0 : `${(size / gridColumns * 100)}%`,
