@@ -24,7 +24,7 @@ export default defineConfig({
 * .(prefix-)col
 * .(prefix-)col-(1-12)
 * .(prefix-)col-auto
-* .(prefix-)col-offset-(1-12)
+* .(prefix-)offset-(1-12)
 * .(prefix-)g(x|y)-*
 
 ### Type of `BootstrapGridOptions`
