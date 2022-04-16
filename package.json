@@ -43,5 +43,6 @@
   "bugs": {
     "url": "https://github.com/stephenhebert/unocss-preset-bootstrap-grid/issues"
   },
-  "homepage": "https://github.com/stephenhebert/unocss-preset-bootstrap-grid"
+  "homepage": "https://github.com/stephenhebert/unocss-preset-bootstrap-grid",
+  "main": "index.js"
 }
