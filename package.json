@@ -1,6 +1,6 @@
 {
   "name": "unocss-preset-bootstrap-grid",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Bootstrap Grid Preset for UnoCSS",
   "engines": {
     "node": ">=14.18"
