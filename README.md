@@ -27,6 +27,8 @@ export default defineConfig({
 * .(prefix-)offset-(1-12)
 * .(prefix-)g(x|y)-*
 
+> See [tailwind-bootstrap-grid](https://tailwind-bootstrap-grid.netlify.app/) for examples / syntax
+
 ### Type of `BootstrapGridOptions`
 
 ```ts
