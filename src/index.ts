@@ -27,6 +27,9 @@ export interface BootstrapGridOptions {
 
 // TODO: - container max widths? https://getbootstrap.com/docs/5.0/layout/containers/
 
+/**
+ * @public
+ */
 export function presetBootstrapGrid(options: BootstrapGridOptions = {}): Preset {
   const prefix = options.prefix ?? 'b-'
   const gutter = options.gutter ?? '1rem'
@@ -68,7 +71,7 @@ export function presetBootstrapGrid(options: BootstrapGridOptions = {}): Preset 
         ([, size]) => {
           if (size) return {
             'flex': '0 0 auto',
-            'width': `${(size / gridColumns * 100)}%`,
+            'width': `${(Number(size) / gridColumns * 100)}%`,
           }
           else return {
             'flex': '1 0 0%',
@@ -82,7 +85,7 @@ export function presetBootstrapGrid(options: BootstrapGridOptions = {}): Preset 
       [new RegExp(`^${prefix}offset-(\\d+)$`),
         ([, size]) => {
           return {
-            'margin-left': size === '0' ? 0 : `${(size / gridColumns * 100)}%`,
+            'margin-left': size === '0' ? 0 : `${(Number(size) / gridColumns * 100)}%`,
           }
         }
       ],
@@ -90,9 +93,9 @@ export function presetBootstrapGrid(options: BootstrapGridOptions = {}): Preset 
         ([, columns], { rawSelector }) => {
           const selector = e(rawSelector)
           const template = `
-            .${selector} > * { 
+            .${selector} > * {
               flex: 0 0 auto;
-              width: ${(columns === 'auto' ? 'auto' : `${(100 / columns)}%`)};
+              width: ${(columns === 'auto' ? 'auto' : `${(100 / Number(columns))}%`)};
             }
           `
           return template.replace(/^ {12}/gm, '')
@@ -101,8 +104,8 @@ export function presetBootstrapGrid(options: BootstrapGridOptions = {}): Preset 
       [new RegExp(`^${prefix}g(x|y)?-(\\d+)$`),
         ([, dim, size]) => {
           let returnObj = {}
-          if (dim !== 'y') returnObj[`--${prefix}gutter-x`] = `${.25 * size}rem`
-          if (dim !== 'x') returnObj[`--${prefix}gutter-y`] = `${.25 * size}rem`
+          if (dim !== 'y') returnObj[`--${prefix}gutter-x`] = `${.25 * Number(size)}rem`
+          if (dim !== 'x') returnObj[`--${prefix}gutter-y`] = `${.25 * Number(size)}rem`
           return returnObj
         }
       ],
