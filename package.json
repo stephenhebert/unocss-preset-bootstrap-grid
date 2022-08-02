@@ -13,13 +13,13 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build && api-extractor run",
     "build-demo": "vite build --mode demo",
     "preview": "vite preview",
     "release": "npx bumpp package.json --commit \"release: v\" --push --tag"
   },
-  "dependencies": {},
   "devDependencies": {
+    "@microsoft/api-extractor": "^7.28.7",
     "@types/estree": "^0.0.50",
     "@types/node": "^17.0.8",
     "marked": "^4.0.8",
