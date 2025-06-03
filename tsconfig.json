@@ -15,10 +15,14 @@
     "declaration": true,
     "declarationDir": "./temp",
     "emitDeclarationOnly": true,
-    "paths": {
-      "unocss-preset-chroma": ["./src"]
-    }
+    "types": [
+      "node"
+    ],
+    "skipLibCheck": true
   },
-  "include": ["./src/**/*.ts"],
-  "exclude": ["**/node_modules/**"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "temp"
+  ]
 }
